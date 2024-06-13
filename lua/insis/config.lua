@@ -363,7 +363,7 @@ local UserConfig = {
     enable = false,
     ---@type "eslint" | false
     linter = "eslint", -- :EslintFixAll command added
-    ---@type false | "prettier" | "tsserver"
+    ---@type false | "prettier" | "tsserver" | "biome"
     formatter = "tsserver",
     format_on_save = false,
     cspell = false,
@@ -435,7 +435,9 @@ local UserConfig = {
     lsp = "pylsp",
     -- pip install black
     -- asdf reshim python
-    formatter = "black",
+    -- formatter = "black",
+    -- pip install ruff
+    formatter = "ruff",
     format_on_save = false,
   },
 
@@ -469,7 +471,7 @@ local UserConfig = {
       follow_link = "gd",
       toggle_item = "tt",
     },
-    formatter = "prettier",
+    formatter = "biome",
     format_on_save = false,
     wrap = true,
     ---@type "dark" | "light"

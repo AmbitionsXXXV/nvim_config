@@ -64,6 +64,9 @@ return function(config)
       if config.formatter == "prettier" then
         table.insert(list, "prettier")
       end
+      if config.formatter == "biome" then
+        table.insert(list, "biome")
+      end
       if config.cspell then
         table.insert(list, "cspell")
       end
