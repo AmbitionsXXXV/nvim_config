@@ -9,7 +9,7 @@ require("insis").setup({
   },
   python = {
     enable = true,
-    formatter = "ruff",
+    formatter = "black",
     format_on_save = true,
   },
   rust = {

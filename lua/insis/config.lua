@@ -431,13 +431,13 @@ local UserConfig = {
   ---@class PythonConfig
   python = {
     enable = false,
-    -- can be pylsp or pyright
+    -- can be pylsp or pyright or ruff-lsp
     lsp = "pylsp",
     -- pip install black
     -- asdf reshim python
-    -- formatter = "black",
+    formatter = "black",
     -- pip install ruff
-    formatter = "ruff",
+    -- formatter = "ruff",
     format_on_save = false,
   },
 

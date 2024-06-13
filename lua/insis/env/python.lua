@@ -17,6 +17,9 @@ return function(config)
       if config.lsp == "pylsp" then
         return { "pylsp" }
       end
+      if config.lsp == "ruff-lsp" then
+        return { "ruff-lsp" }
+      end
       return {}
     end,
 
@@ -26,12 +29,20 @@ return function(config)
           pylsp = require("insis.lsp.config.pylsp"),
         }
       end
+      if config.lsp == "ruff-lsp" then
+        return {
+          pylsp = require("insis.lsp.config.ruff-lsp"),
+        }
+      end
       return {}
     end,
 
     getToolEnsureList = function()
       if config.formatter == "black" then
         return { "black" }
+      end
+      if config.formatter == "ruff" then
+        return { "ruff" }
       end
       return {}
     end,
@@ -43,6 +54,9 @@ return function(config)
       end
       if config.formatter == "black" then
         return { null_ls.builtins.formatting.black.with({ extra_args = { "--fast" } }) }
+      end
+      if config.formatter == "ruff" then
+        return { null_ls.builtins.formatting.ruff }
       end
       return {}
     end,
