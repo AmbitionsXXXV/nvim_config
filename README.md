@@ -1,6 +1,6 @@
 # 关于本项目
 
-fork from [这个仓库](https://github.com/nshen/InsisVim)
+**fork from [这个仓库](https://github.com/nshen/InsisVim)**
 
 详细配置请参考原仓库的 README.md
 
