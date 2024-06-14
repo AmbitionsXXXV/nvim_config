@@ -5,6 +5,7 @@ require("insis").setup({
   frontend = {
     enable = true,
     tailwindcss = true,
+    formatter = 'biome',
     format_on_save = true,
   },
   python = {

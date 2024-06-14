@@ -416,7 +416,7 @@ local UserConfig = {
     lsp = "rust_analyzer",
     -- rustup component add rustfmt
     formatter = "rustfmt",
-    format_on_save = false,
+    format_on_save = true,
   },
 
   ---@class BashConfig

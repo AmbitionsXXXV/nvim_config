@@ -103,6 +103,27 @@ return function(config)
           })
         )
       end
+      if config.formatter == "biome" then
+        table.insert(
+          list,
+          null_ls.builtins.formatting.biome.with({
+            cmd = { 'biome', 'lsp-proxy' },
+            filetypes = {
+              'javascript',
+              'javascriptreact',
+              'json',
+              'jsonc',
+              'typescript',
+              'typescript.tsx',
+              'typescriptreact',
+              'astro',
+              'svelte',
+              'vue',
+              'css',
+            },
+          })
+        )
+      end
       if config.cspell then
         table.insert(
           list,
